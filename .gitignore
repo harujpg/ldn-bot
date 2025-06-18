@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Variáveis de ambiente
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Diretórios de build/deploy (caso venham a existir)
+dist/
+build/
+
+# Configurações do editor
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db

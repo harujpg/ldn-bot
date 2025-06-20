@@ -20,7 +20,7 @@ module.exports = {
     await member.roles.remove(muteRole);
     await interaction.reply(`🔊 ${user.tag} foi desmutado.`);
 
-    const logChannel = interaction.guild.channels.cache.find(c => c.name === 'logs');
+    const logChannel = interaction.guild.channels.cache.find(c => c.name === '﹕logs');
     if (logChannel) {
       logChannel.send(`🛠️ **${interaction.user.tag}** desmutou **${user.tag}**.`);
     }

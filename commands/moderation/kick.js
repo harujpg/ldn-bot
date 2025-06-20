@@ -23,7 +23,7 @@ module.exports = {
       await member.kick(motivo);
       await interaction.reply(`👢 ${user.tag} foi expulso. Motivo: ${motivo}`);
 
-      const logChannel = interaction.guild.channels.cache.find(c => c.name === 'logs');
+      const logChannel = interaction.guild.channels.cache.find(c => c.name === '﹕logs');
       if (logChannel) {
         logChannel.send(`🛠️ **${interaction.user.tag}** expulsou **${user.tag}**. Motivo: ${motivo}`);
       }

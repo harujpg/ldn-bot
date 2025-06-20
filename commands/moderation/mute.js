@@ -24,7 +24,7 @@ module.exports = {
     await member.roles.add(muteRole);
     await interaction.reply(`🔇 ${user.tag} foi mutado.`);
 
-    const logChannel = interaction.guild.channels.cache.find(c => c.name === 'logs');
+    const logChannel = interaction.guild.channels.cache.find(c => c.name === '﹕logs');
     if (logChannel) {
       logChannel.send(`🛠️ **${interaction.user.tag}** mutou **${user.tag}**.`);
     }

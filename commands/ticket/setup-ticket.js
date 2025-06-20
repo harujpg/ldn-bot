@@ -12,17 +12,19 @@ module.exports = {
     .setDescription('Envia o painel com botão para abrir ticket'),
 
   async execute(interaction) {
-    const cargoPermitidoId = '1384669173145272451'; // substitua pelo ID do cargo que pode usar o comando
+    const cargoPermitidoId = '1384669173145272451'; // ID do cargo permitido
+    const logChannelId = '1384682988255707166'; // ID do canal de logs
+    const staffRoleId = '1384669180846018720'; // ID do cargo da staff
 
-    // Verifica se o membro tem o cargo
+    // Verifica permissão
     if (!interaction.member.roles.cache.has(cargoPermitidoId)) {
       return interaction.reply({
         content: '❌ Você não tem permissão para usar este comando.',
-        ephemeral: true // só o usuário vê essa mensagem
+        ephemeral: true
       });
     }
 
-
+    // Cria botão
     const botao = new ButtonBuilder()
       .setCustomId('criar_ticket')
       .setLabel('📩 Abrir Ticket')
@@ -31,10 +33,10 @@ module.exports = {
     const row = new ActionRowBuilder().addComponents(botao);
 
     const embed = new EmbedBuilder()
-      .setColor('#2f3136') // cor escura
+      .setColor('#2f3136')
       .setTitle('🎫 Suporte LDN')
       .setDescription('Precisa de ajuda?\nClique no botão abaixo para abrir um **ticket privado** com nossa equipe.')
-      .setThumbnail(interaction.client.user.displayAvatarURL()) // avatar do bot
+      .setThumbnail(interaction.client.user.displayAvatarURL())
       .setFooter({ text: 'LDN | Sistema de Atendimento', iconURL: interaction.client.user.displayAvatarURL() })
       .setTimestamp();
 

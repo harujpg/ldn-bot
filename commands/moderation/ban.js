@@ -23,7 +23,7 @@ module.exports = {
       await member.ban({ reason: motivo });
       await interaction.reply(`✅ ${user.tag} foi banido. Motivo: ${motivo}`);
 
-      const logChannel = interaction.guild.channels.cache.find(c => c.name === 'logs');
+      const logChannel = interaction.guild.channels.cache.find(c => c.name === '﹕logs');
       if (logChannel) {
         logChannel.send(`🛠️ **${interaction.user.tag}** baniu **${user.tag}**. Motivo: ${motivo}`);
       }

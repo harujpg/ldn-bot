@@ -12,7 +12,7 @@ module.exports = {
     .setDescription('Envia o painel com botão para abrir ticket'),
 
   async execute(interaction) {
-    const cargoPermitidoId = '1384669173145272451'; // ID do cargo permitido
+    const cargoPermitidoId = '1385007781144297532'; // ID do cargo permitido
     const logChannelId = '1384682988255707166'; // ID do canal de logs
     const staffRoleId = '1384669180846018720'; // ID do cargo da staff
 
@@ -34,10 +34,10 @@ module.exports = {
 
     const embed = new EmbedBuilder()
       .setColor('#2f3136')
-      .setTitle('🎫 Suporte LDN')
+      .setTitle('🎫 Suporte Frost')
       .setDescription('Precisa de ajuda?\nClique no botão abaixo para abrir um **ticket privado** com nossa equipe.')
       .setThumbnail(interaction.client.user.displayAvatarURL())
-      .setFooter({ text: 'LDN | Sistema de Atendimento', iconURL: interaction.client.user.displayAvatarURL() })
+      .setFooter({ text: 'Frost | Sistema de Atendimento', iconURL: interaction.client.user.displayAvatarURL() })
       .setTimestamp();
 
     await interaction.reply({

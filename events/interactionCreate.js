@@ -4,7 +4,10 @@ const {
   ButtonStyle, 
   ChannelType, 
   PermissionsBitField, 
-  EmbedBuilder 
+  EmbedBuilder,
+  ModalBuilder,
+  TextInputBuilder,
+  TextInputStyle
 } = require('discord.js');
 
 const staffRoleId = '1384669180846018720'; // Coloque aqui o ID do cargo da staff
@@ -132,6 +135,9 @@ module.exports = {
           return;
         }
       }
+
+      // Remover todo o tratamento relacionado ao embedwizard
+      // (modais, botões, menus, dados temporários)
     } catch (error) {
       console.error('Erro na interação:', error);
       if (interaction.replied || interaction.deferred) {
